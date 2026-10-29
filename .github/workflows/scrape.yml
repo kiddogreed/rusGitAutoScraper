@@ -1,16 +1,23 @@
 name: Scrape
 
 on:
-  schedule:
-    # Runs every 6 hours. Adjust cadence as needed in later phases.
-    - cron: "0 */6 * * *"
-  workflow_dispatch: {}
-  push:
-    branches: [main]
-    paths:
-      - "scraper.py"
-      - "requirements.txt"
-      - ".github/workflows/scrape.yml"
+  # Manual trigger only (per project config). A `schedule:` cron trigger can
+  # be added back here later if automatic runs are wanted.
+  workflow_dispatch:
+    inputs:
+      language:
+        description: "Filter trending repos by language (e.g. python). Leave empty for all languages."
+        required: false
+        default: ""
+      since:
+        description: "Trending period"
+        required: false
+        type: choice
+        default: daily
+        options:
+          - daily
+          - weekly
+          - monthly
 
 permissions:
   contents: write
@@ -18,6 +25,9 @@ permissions:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    env:
+      TRENDING_LANGUAGE: ${{ github.event.inputs.language }}
+      TRENDING_SINCE: ${{ github.event.inputs.since }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

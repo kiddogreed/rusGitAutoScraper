@@ -1,5 +1,141 @@
 {
-  "generated_at": "2026-10-29T12:00:54.092345+00:00",
+  "generated_at": "2026-10-29T13:17:11.449434+00:00",
   "status": "ok",
-  "items": []
+  "source": "https://github.com/trending?since=daily",
+  "since": "daily",
+  "language": null,
+  "items": [
+    {
+      "rank": 1,
+      "owner": "HKUDS",
+      "name": "DeepTutor",
+      "full_name": "HKUDS/DeepTutor",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/ .",
+      "language": "Python",
+      "stars_total": 49158,
+      "forks_total": 6070,
+      "stars_in_period": 1926
+    },
+    {
+      "rank": 2,
+      "owner": "obra",
+      "name": "superpowers",
+      "full_name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell",
+      "stars_total": 307992,
+      "forks_total": 27392,
+      "stars_in_period": 1037
+    },
+    {
+      "rank": 3,
+      "owner": "pbakaus",
+      "name": "impeccable",
+      "full_name": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+      "language": "Rust",
+      "stars_total": 94335,
+      "forks_total": 5570,
+      "stars_in_period": 2881
+    },
+    {
+      "rank": 4,
+      "owner": "JetBrains",
+      "name": "thinkrail",
+      "full_name": "JetBrains/thinkrail",
+      "url": "https://github.com/JetBrains/thinkrail",
+      "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work \u2014 The Vibe You Need",
+      "language": "TypeScript",
+      "stars_total": 5691,
+      "forks_total": 298,
+      "stars_in_period": 1116
+    },
+    {
+      "rank": 5,
+      "owner": "milind-soni",
+      "name": "OpenMausBot",
+      "full_name": "milind-soni/OpenMausBot",
+      "url": "https://github.com/milind-soni/OpenMausBot",
+      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "language": "TypeScript",
+      "stars_total": 7093,
+      "forks_total": 1079,
+      "stars_in_period": 1190
+    },
+    {
+      "rank": 6,
+      "owner": "nightly-labs",
+      "name": "openbot",
+      "full_name": "nightly-labs/openbot",
+      "url": "https://github.com/nightly-labs/openbot",
+      "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
+      "language": "TypeScript",
+      "stars_total": 3615,
+      "forks_total": 339,
+      "stars_in_period": 705
+    },
+    {
+      "rank": 7,
+      "owner": "elayadesign",
+      "name": "ai-design-skills",
+      "full_name": "elayadesign/ai-design-skills",
+      "url": "https://github.com/elayadesign/ai-design-skills",
+      "description": "",
+      "language": null,
+      "stars_total": 11756,
+      "forks_total": 851,
+      "stars_in_period": 1178
+    },
+    {
+      "rank": 8,
+      "owner": "thedotmack",
+      "name": "claude-mem",
+      "full_name": "thedotmack/claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "description": "Persistent Context Across Sessions for Every Agent \u2013 Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+      "language": "TypeScript",
+      "stars_total": 104254,
+      "forks_total": 9198,
+      "stars_in_period": 324
+    },
+    {
+      "rank": 9,
+      "owner": "CopilotKit",
+      "name": "OpenBot",
+      "full_name": "CopilotKit/OpenBot",
+      "url": "https://github.com/CopilotKit/OpenBot",
+      "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+      "language": "TypeScript",
+      "stars_total": 7796,
+      "forks_total": 1031,
+      "stars_in_period": 240
+    },
+    {
+      "rank": 10,
+      "owner": "togg53192-cmd",
+      "name": "jailbreaks",
+      "full_name": "togg53192-cmd/jailbreaks",
+      "url": "https://github.com/togg53192-cmd/jailbreaks",
+      "description": "LIST OF ALL MY JAILBREAKS",
+      "language": null,
+      "stars_total": 8054,
+      "forks_total": 1138,
+      "stars_in_period": 1610
+    },
+    {
+      "rank": 11,
+      "owner": "Donchitos",
+      "name": "Claude-Code-Game-Studios",
+      "full_name": "Donchitos/Claude-Code-Game-Studios",
+      "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+      "description": "Turn Claude Code into a full game dev studio \u2014 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
+      "language": "Shell",
+      "stars_total": 28697,
+      "forks_total": 4018,
+      "stars_in_period": 538
+    }
+  ]
 }
