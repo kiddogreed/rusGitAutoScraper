@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rus Git Auto Scraper</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0d1117;
+      --fg: #c9d1d9;
+      --accent: #58a6ff;
+      --card: #161b22;
+      --border: #30363d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+    }
+    header {
+      padding: 2rem 1.5rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    header h1 { margin: 0 0 0.25rem; font-size: 1.5rem; }
+    header p { margin: 0; color: #8b949e; }
+    main { padding: 1.5rem; max-width: 960px; margin: 0 auto; }
+    #status {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    #items { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem; }
+    #items li {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+    a { color: var(--accent); }
+    .empty { color: #8b949e; font-style: italic; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rus Git Auto Scraper</h1>
+    <p>Static dashboard — data is refreshed automatically by GitHub Actions.</p>
+  </header>
+  <main>
+    <section id="status">Loading latest data&hellip;</section>
+    <ul id="items"></ul>
+  </main>
+
+  <script>
+    async function loadData() {
+      const statusEl = document.getElementById('status');
+      const itemsEl = document.getElementById('items');
+      try {
+        const res = await fetch('data.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        statusEl.textContent = `Last updated: ${new Date(data.generated_at).toLocaleString()} — status: ${data.status}`;
+
+        itemsEl.innerHTML = '';
+        if (!data.items || data.items.length === 0) {
+          const li = document.createElement('li');
+          li.className = 'empty';
+          li.textContent = 'No items yet. The scraper has not collected data.';
+          itemsEl.appendChild(li);
+          return;
+        }
+        for (const item of data.items) {
+          const li = document.createElement('li');
+          li.textContent = JSON.stringify(item);
+          itemsEl.appendChild(li);
+        }
+      } catch (err) {
+        statusEl.textContent = `Unable to load data.json (${err.message}). Run the scraper to generate it.`;
+      }
+    }
+    loadData();
+  </script>
+</body>
+</html>
